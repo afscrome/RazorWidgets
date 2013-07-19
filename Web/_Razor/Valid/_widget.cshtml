@@ -1,0 +1,10 @@
+﻿@using System 
+@using Telligent.Evolution.Extensibility.Api.Version1
+
+Hello From Razor.
+<ul>
+	@foreach (var group in PublicApi.Groups.List())
+	{
+		<li><a href="@group.Url">@group.Name</a></li>
+	}
+</ul>
