@@ -1,0 +1,7 @@
+﻿#if(true)
+	hello
+#elseif(false)
+	world
+#else
+	fail
+#end

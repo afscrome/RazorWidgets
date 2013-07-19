@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF205A86-3CF0-4B90-BAEC-BA5F07B2362D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WidgetConversionTests</RootNamespace>
+    <AssemblyName>WidgetConversionTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.1\lib\net20\xunit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RazorBaseStub.cs" />
+    <Compile Include="VelocityConversionTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ConversionTests\ConditionalStyle.cshtml" />
+    <None Include="ConversionTests\ConditionalStyle.vm" />
+    <None Include="ConversionTests\DoubleSet.cshtml" />
+    <None Include="ConversionTests\DoubleSet.vm" />
+    <None Include="ConversionTests\NestedIf.cshtml" />
+    <None Include="ConversionTests\NestedIf.vm" />
+    <None Include="ConversionTests\SetDictionaryString.cshtml" />
+    <None Include="ConversionTests\SetDictionaryString.vm" />
+    <None Include="ConversionTests\IfSet.cshtml" />
+    <None Include="ConversionTests\IfSet.vm" />
+    <None Include="ConversionTests\SetInterpolatedString.cshtml" />
+    <None Include="ConversionTests\SetInterpolatedString.vm" />
+    <None Include="ConversionTests\SetFromMethod.cshtml" />
+    <None Include="ConversionTests\SetFromMethod.vm" />
+    <None Include="ConversionTests\SetFromProperty.cshtml" />
+    <None Include="ConversionTests\SetFromProperty.vm" />
+    <None Include="ConversionTests\IfHide.cshtml" />
+    <None Include="ConversionTests\IfHide.vm" />
+    <None Include="ConversionTests\MultiLineIf.cshtml" />
+    <None Include="ConversionTests\MultiLineIf.vm" />
+    <None Include="ConversionTests\MultiLineIfElseIf.cshtml" />
+    <None Include="ConversionTests\MultiLineIfElseIf.vm" />
+    <None Include="ConversionTests\SingleLineIfElseIf.cshtml" />
+    <None Include="ConversionTests\SingleLineIfElseIf.vm" />
+    <None Include="ConversionTests\SingleLineIf.cshtml" />
+    <None Include="ConversionTests\SingleLineIf.vm" />
+    <None Include="ConversionTests\ExtensionMethod2Parameters.cshtml" />
+    <None Include="ConversionTests\ExtensionMethod2Parameters.vm" />
+    <None Include="ConversionTests\ExtensionMethod1Parameter.cshtml" />
+    <None Include="ConversionTests\ExtensionMethod1Parameter.vm" />
+    <None Include="ConversionTests\ExtensionMethod0Parameters.cshtml" />
+    <None Include="ConversionTests\ExtensionMethod0Parameters.vm" />
+    <None Include="ConversionTests\SingleExtension.cshtml" />
+    <None Include="ConversionTests\SingleExtension.vm" />
+    <None Include="ConversionTests\Set.cshtml" />
+    <None Include="ConversionTests\Set.vm" />
+    <None Include="ConversionTests\SingleVariable.cshtml" />
+    <None Include="ConversionTests\SingleVariable.vm" />
+    <None Include="ConversionTests\HtmlOnly.cshtml" />
+    <None Include="ConversionTests\HtmlOnly.vm">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConversionTests\empty.cshtml" />
+    <None Include="ConversionTests\empty.vm" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WidgetConverter\WidgetConverter.csproj">
+      <Project>{be46b2cb-7c1e-4ae3-9894-0496f33b6c1f}</Project>
+      <Name>WidgetConverter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

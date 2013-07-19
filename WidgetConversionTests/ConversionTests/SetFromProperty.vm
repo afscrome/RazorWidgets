@@ -1,0 +1,1 @@
+﻿#set($name = $core_v2_widget.RegionName)

@@ -1,0 +1,1 @@
+﻿#set($group = $core_v2_groups.Get($blog.Id))

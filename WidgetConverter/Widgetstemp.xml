@@ -1,0 +1,48 @@
+<scriptedContentFragments>
+  <scriptedContentFragment instanceIdentifier="ec7c6fe6fbdd450b94d6f0a411636fc2" >
+    <contentScript>
+      <![CDATA[
+      ##set($x = [1..3])
+      #set($x = [1,2,3])
+      Single line
+      #if(true) boo #else ya #end
+
+
+
+
+
+      Multiline
+      #if(true)
+        boo
+      #else
+        ya
+      #end
+
+      
+      ]]>
+    </contentScript>
+  </scriptedContentFragment>
+<!--
+  <scriptedContentFragment instanceIdentifier="ec7c6fe6fbdd450b94d6f0a411636fc2" >
+    <contentScript>
+      <![CDATA[
+      #set ($blog = "blahtest")
+      ]]>
+    </contentScript>
+  </scriptedContentFragment>
+  <scriptedContentFragment instanceIdentifier="ec7c6fe6fbdd450b94d6f0a411636fc2" >
+    <contentScript>
+      <![CDATA[
+      #set ($blog = 1)
+      ]]>
+    </contentScript>
+  </scriptedContentFragment>
+  <scriptedContentFragment instanceIdentifier="ec7c6fe6fbdd450b94d6f0a411636fc2" >
+    <contentScript>
+      <![CDATA[
+      #set ($blog = (1 - 1) * (1 / 1))
+      ]]>
+    </contentScript>
+  </scriptedContentFragment>
+  -->
+</scriptedContentFragments>
